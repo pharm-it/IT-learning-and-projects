@@ -1,0 +1,42 @@
+Created by Abdul Hafiz Al Masri:
+
+*This guide is about the proper installation of Apothicaire.net pharmacy application on a PC host or a Virtual Machine (VM) guest.*
+*
+
+A- Requirements
+
+1-A PC running a VM application (VMware player, Oracle Virtualbox, MS hyper-V) (In this case I will be using VMWare player)
+2-MS-Windows installation iso or DVD
+3-A copy of the app installation folder (Phoenix.net) taken from the server PC at the pharmacy
+4- A copy of the app database (C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data  taste service log file and mdf file)
+
+B-Procedure
+
+1-Download and install VMware player
+2-Create a new virtual machine using windows iso file
+3-install ms sql server 2014
+4-download any necessary files (eg MS visual c++ runtime or .net framework)
+5-install apothicaire.net by running setup from Phoenix.net folder
+6-copy the database files(log and mdf) to the destination folder inside the VM
+7-run MS sql server managment studio
+8-connect
+9-attach database files inside the folder where we already copied the database files
+10-close the managment studio
+11-run the application
+12-get the activation code from the app developer
+
+*In case of any errors or not being able to start the aplication after attaching the database or not being able to attach the database do the following:
+
+1-on the main application server go to phoenix.net folder there is a default taste service log and mdf file, copy them
+2-in the VM paste the copied files in their destination folder and replace the old files.
+3-open sql server managment studio and attach the mdf file
+4- run the app
+5-get activation code from the app developer.
+6- need to get a backup file from the application at the server (from inside apothicaire  file-backup-backup to external usb drive)
+7-open the app in the VM
+8-attach the usb then from inside the apothicaire app  file -backup-restore
+*note that if u attach the usb before u open the app it will ask for activation, so be sure to RUN THE APP FIRST THE STICK THE USB
+
+9-everything should run now
+
+
