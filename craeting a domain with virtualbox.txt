@@ -1,0 +1,25 @@
+# the following is a method to create a domain with Oracle virtualbox
+# i will create a VM domain pharmit.local with windows server 2019
+#i will create a client VM running windows 7 64it
+
+1-download windows server 2019 trial and windows 7 iso`s 
+2-create the virtual machines (i used oracle virtualbox)
+3-after creation and installation is complete go to machines settings - network - use internal network
+and create a name for the internal network eg pharmitnet
+4-for the server VM use a static ip, and use the dns server ip as the server ip
+5-for the windows vm use a static ip, and the DNS ip is the same as the server ip
+6-the machines should be able to ping each other now
+
+
+on the server side:
+7- add new roles :  Active Directory and DHCP
+8-after installation is complete create the new active directory 
+9-open DHCP and create a new scope start ip and end ip with all necessary settings
+10-open users and create a new user in order for the client be able to join the domain
+
+on client side
+11-open computer properties
+12-advanced system settings
+13-computer name
+14-join domain
+15- restart
